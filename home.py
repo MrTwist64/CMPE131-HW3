@@ -1,11 +1,11 @@
 from flask import Flask
 
-myapp = Flask(__name__)
+myobj = Flask(__name__)
 
 name = 'Aaron'
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
-@myapp.route("/")
+@myobj.route("/")
 def home():
     output_str = f"""
     <html>
@@ -25,4 +25,4 @@ def home():
     """
     return output_str
 
-myapp.run()
+#myobj.run()
