@@ -1,6 +1,11 @@
 from app import myobj
 from flask import flash, redirect, render_template
-from app.forms import CityForm
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+
+class CityForm(FlaskForm):
+    new_city = StringField('City Name')
+    submit = SubmitField('Submit')
 
 name = 'Aaron'
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
